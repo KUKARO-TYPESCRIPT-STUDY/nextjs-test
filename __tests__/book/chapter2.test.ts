@@ -1,4 +1,5 @@
 import {describe, expect, test} from '@jest/globals';
+import {hello} from "@/app/utils/hello";
 
 describe('chapter2', () => {
   test('sayHello function test', () => {
@@ -78,5 +79,10 @@ describe('chapter2', () => {
     type UserKey = keyof User
     const key: UserKey = 'name'
     expect(key).toBe('name')
+  })
+
+  test('type assertion test', () => {
+    const value: string = 'kukaro'
+    expect(hello(value)).toBe('Hello, kukaro!')
   })
 })

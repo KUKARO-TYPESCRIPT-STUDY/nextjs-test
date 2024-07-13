@@ -2,12 +2,14 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import UseStateTest from "@/app/component/UseStateTest";
 import UseReducerTest from "@/app/component/UseReducerTest";
+import MemoTest from "@/app/component/MemoTest2";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <UseStateTest initialValue={10}/>
       <UseReducerTest initialValue={10}/>
+      <MemoTest/>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
