@@ -3,13 +3,25 @@ import styles from "./page.module.css";
 import UseStateTest from "@/app/component/UseStateTest";
 import UseReducerTest from "@/app/component/UseReducerTest";
 import MemoTest from "@/app/component/MemoTest2";
+import UseCallbackTest from "@/app/component/UseCallback";
+import UseMemoTest from "@/app/component/UseMemoTest";
 
 export default function Home() {
+  const isRender = false
   return (
     <main className={styles.main}>
-      <UseStateTest initialValue={10}/>
-      <UseReducerTest initialValue={10}/>
-      <MemoTest/>
+      {
+        isRender && (
+          <>
+            <UseStateTest initialValue={10}/>
+            <UseReducerTest initialValue={10}/>
+            <MemoTest/>
+            <UseCallbackTest/>
+          </>
+        )
+      }
+
+      <UseMemoTest/>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
