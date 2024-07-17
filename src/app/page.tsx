@@ -5,6 +5,7 @@ import UseReducerTest from "@/app/component/UseReducerTest";
 import MemoTest from "@/app/component/MemoTest2";
 import UseCallbackTest from "@/app/component/UseCallback";
 import UseMemoTest from "@/app/component/UseMemoTest";
+import UseImperativeHandleTest from "@/app/component/UseImpreativeHandleTest";
 
 export default function Home() {
   const isRender = false
@@ -17,11 +18,11 @@ export default function Home() {
             <UseReducerTest initialValue={10}/>
             <MemoTest/>
             <UseCallbackTest/>
+            <UseMemoTest/>
           </>
         )
       }
-
-      <UseMemoTest/>
+      <UseImperativeHandleTest/>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
