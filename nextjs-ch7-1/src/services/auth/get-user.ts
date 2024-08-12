@@ -6,17 +6,18 @@ export type GetUserParams = {
 }
 
 const getUser = async (
-  context:ApiContext,
-  { id }: GetUserParams
+  context: ApiContext,
+  { id }: GetUserParams,
 ): Promise<User> => {
   return await fetcher(
-    `${context.apiRootUrl.replace('/\/$/g','')}/users/${id}`,
+    //TODO: 원래는 /\/$/g이렇게 되어있어서 에러나면 바꿔야함
+    `${context.apiRootUrl.replace('//$/g', '')}/users/${id}`,
     {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-    }
+    },
   )
 }
 
